@@ -7,17 +7,17 @@
 - Nhóm sử dụng tập dữ liệu House Rent Dataset trên Kaggle. Dữ liệu này cung cấp thông tin về các căn hộ/phòng cho thuê ở Ấn Độ được mô tả dựa trên nhiều đặc điểm khác nhau như kích thước phòng, vị trí căn hộ, số lượng phòng cho thuê, đối tượng ưu tiên,.. giá cho thuê.  
 - Nguồn dữ liệu: https://www.kaggle.com/datasets/iamsouravbanerjee/house-rent-prediction-dataset
 - Tập dữ liệu gồm có hơn 4.700 dòng (rows) là các nhà cho thuê và 12 cột (columns) là thông tin về căn hộ cho thuê đó. Cụ thể là 
-* BHK: Số lượng phòng ngủ(Bedrooms), sảnh(Hall), phòng bếp (Kitchen).
-* Rent: Giá cho thuê của nhà/ căn hộ.
-* Size: Diện tích nhà/ căn hộ (feet vuông).
-* Floor: Tầng đang cho thuê trong tổng số các tầng (Example: Ground out of 2, 3 out of 5, etc.)
-* Area Type: Loại khu vực.
-* Area Locality: Vị trí của nhà/ căn hộ.
-* City: Thành phố nơi nhà/ căn hộ tọa lạc.
-* Furnishing Status: Tình trạng nội thất trong nhà/ căn hộ (Nội thất đầy đủ > Nội thất chưa đầy đủ > Không có nội thất).
-* Tenant Preferred: Đối tượng ưu tiên cho thuê.
-* Bathroom: Số lượng phòng tắm.
-* Point of Contact: Người cần liên lạc nếu cần biết thêm thông tin cho thuê nhà/ căn hộ.
+    + BHK: Số lượng phòng ngủ(Bedrooms), sảnh(Hall), phòng bếp (Kitchen).
+    + Rent: Giá cho thuê của nhà/ căn hộ.
+    + Size: Diện tích nhà/ căn hộ (feet vuông).
+    + Floor: Tầng đang cho thuê trong tổng số các tầng (Example: Ground out of 2, 3 out of 5, etc.)
+    + Area Type: Loại khu vực.
+    + Area Locality: Vị trí của nhà/ căn hộ.
+    + City: Thành phố nơi nhà/ căn hộ tọa lạc.
+    + Furnishing Status: Tình trạng nội thất trong nhà/ căn hộ (Nội thất đầy đủ > Nội thất chưa đầy đủ > Không có nội thất).
+    + Tenant Preferred: Đối tượng ưu tiên cho thuê.
+    + Bathroom: Số lượng phòng tắm.
+    + Point of Contact: Người cần liên lạc nếu cần biết thêm thông tin cho thuê nhà/ căn hộ.
 
 ## 3. Tiền xử lý dữ liệu
 - Tải dữ liệu
@@ -41,17 +41,7 @@
 - Tạo index cho các dòng
 ![alt text](/Images/Picture8.png)
 
+## 4. Trực quan dữ liệu
 
-
-
-Tiếp theo ta tiến hành đổi dữ liệu cho cột ‘Recent Floor’. 
-Nếu Recent Floor = ‘Ground’ thì đổi thành 0 
-Nếu Recent Floor = ‘Upper Basement’ thì đổi thành -1
-Nếu Recent Floor = ‘Lower Basement’ thì đổi thành -2
-
-Kiểm tra và xóa các giá trị na trong cột ‘Total Floors’ đã xử lý ở trên
-Tạo index cho các dòng, đánh số từ 1 đến hết.
-
-Xuất DataFrame sau khi đã xử lý xong ra file csv
 
 
