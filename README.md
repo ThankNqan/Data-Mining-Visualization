@@ -77,3 +77,21 @@
     Nhận xét: Ta thấy không có nhiều sự khác biệt về giá thuê giữa hai đối tượng ‘Bachelors’ và ‘Family’
 ##### 4.4. Dashboard giá thuê nhà ở Ấn Độ
 ![alt text](/Images/Picture15.png)
+
+## 5. Khai phá dữ liệu bằng công cụ SSAS
+**SSAS (SQL Server Analysis Services) là một công cụ phân tích dữ liệu của Microsoft SQL Server. Nó cho phép người dùng tạo các mô hình dữ liệu đa chiều (multidimensional) và mô hình dữ liệu phẳng (tabular) để phân tích dữ liệu từ các nguồn khác nhau**
+##### 5.1 Sử dụng thuật toán Association Rule
+- Association Rule: là quá trình tìm ra các mối quan hệ (tương quan) giữa các đối tượng trong tập dữ liệu. Có dạng X => Y với:
+●X: antecedent (tiền đề)
+●Y: consequent (hệ quả)
+- Hai tham số quan trọng được dùng để đo lường luật kết hợp là:
+●Support (độ hỗ trợ): Xác suất mà X và Y đồng thời cùng xuất hiện.
+●Confidence (độ tin cậy): Xác suất xảy ra Y khi có X  
+- Ngoài hai tham số chính là Minimum probability và Minimum support thì thuật toán Microsoft Association Rule còn cung cấp thêm một tham số là Importance (độ quan trọng) - xác định sự tương quan giữa sự kiện X và sự kiện Y. Nếu
+●Importance > 0 (dương) cho thấy khi X xảy ra thì khả năng xuất hiện Y cũng sẽ tăng lên. Importance có giá trị dương lớn cho thấy X có ảnh hưởng tích cực đến sự xuất hiện của Y.  
+●Importance < 0 (âm) cho thấy khi X xảy ra thì khả năng xuất Y sẽ giảm đi. Importance có giá trị âm lớn cho thấy X có ảnh hưởng tiêu cực đến sự xảy ra của Y. 
+●Importance = 0 thì điều này cho thấy không có mối liên hệ giữa X và Y
+- Đối với tập dữ liệu House Rent - Giá thuê nhà ở Ấn Độ, thì sử dụng khai phá luật Kết hợp để tìm ra các mối quan hệ giữa các thuộc tính, các quy luật kết hợp ảnh hưởng đến giá cho thuê (Rent), ví dụ như nếu nơi cho thuê thuộc thành phố lớn và diện tích rộng thì giá thuê sẽ mắc. 
+̵Khi tìm ra các quy luật kết hợp, ta có thể sử dụng chúng để phân tích và đưa ra dự đoán giá thuê nhà dựa trên các mối quan hệ phụ thuộc đó. 
+- **Chọn các thuộc tính đầu vào và đầu ra**
+![alt text](/Images/Picture16.png)
