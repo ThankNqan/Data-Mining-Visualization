@@ -82,16 +82,21 @@
 **SSAS (SQL Server Analysis Services) là một công cụ phân tích dữ liệu của Microsoft SQL Server. Nó cho phép người dùng tạo các mô hình dữ liệu đa chiều (multidimensional) và mô hình dữ liệu phẳng (tabular) để phân tích dữ liệu từ các nguồn khác nhau**
 ##### 5.1 Sử dụng thuật toán Association Rule
 - Association Rule: là quá trình tìm ra các mối quan hệ (tương quan) giữa các đối tượng trong tập dữ liệu. Có dạng X => Y với:
-●X: antecedent (tiền đề)
-●Y: consequent (hệ quả)
+    ●X: antecedent (tiền đề)
+    ●Y: consequent (hệ quả)
 - Hai tham số quan trọng được dùng để đo lường luật kết hợp là:
-●Support (độ hỗ trợ): Xác suất mà X và Y đồng thời cùng xuất hiện.
-●Confidence (độ tin cậy): Xác suất xảy ra Y khi có X  
+    ●Support (độ hỗ trợ): Xác suất mà X và Y đồng thời cùng xuất hiện.
+    ●Confidence (độ tin cậy): Xác suất xảy ra Y khi có X  
 - Ngoài hai tham số chính là Minimum probability và Minimum support thì thuật toán Microsoft Association Rule còn cung cấp thêm một tham số là Importance (độ quan trọng) - xác định sự tương quan giữa sự kiện X và sự kiện Y. Nếu
-●Importance > 0 (dương) cho thấy khi X xảy ra thì khả năng xuất hiện Y cũng sẽ tăng lên. Importance có giá trị dương lớn cho thấy X có ảnh hưởng tích cực đến sự xuất hiện của Y.  
-●Importance < 0 (âm) cho thấy khi X xảy ra thì khả năng xuất Y sẽ giảm đi. Importance có giá trị âm lớn cho thấy X có ảnh hưởng tiêu cực đến sự xảy ra của Y. 
-●Importance = 0 thì điều này cho thấy không có mối liên hệ giữa X và Y
+    ●Importance > 0 (dương) cho thấy khi X xảy ra thì khả năng xuất hiện Y cũng sẽ tăng lên. Importance có giá trị dương lớn cho thấy X có ảnh hưởng tích cực đến sự xuất hiện của Y.  
+    ●Importance < 0 (âm) cho thấy khi X xảy ra thì khả năng xuất Y sẽ giảm đi. Importance có giá trị âm lớn cho thấy X có ảnh hưởng tiêu cực đến sự xảy ra của Y. 
+    ●Importance = 0 thì điều này cho thấy không có mối liên hệ giữa X và Y
 - Đối với tập dữ liệu House Rent - Giá thuê nhà ở Ấn Độ, thì sử dụng khai phá luật Kết hợp để tìm ra các mối quan hệ giữa các thuộc tính, các quy luật kết hợp ảnh hưởng đến giá cho thuê (Rent), ví dụ như nếu nơi cho thuê thuộc thành phố lớn và diện tích rộng thì giá thuê sẽ mắc. 
 ̵Khi tìm ra các quy luật kết hợp, ta có thể sử dụng chúng để phân tích và đưa ra dự đoán giá thuê nhà dựa trên các mối quan hệ phụ thuộc đó. 
 - **Chọn các thuộc tính đầu vào và đầu ra**
 ![alt text](/Images/Picture16.png)
+- **Kết quả sau khi thực hiện thuật toán được mô tả bởi Dependency Network**
+![alt text](/Images/Picture17.png)
+- Ở Dependency Network, ta có thể xem được các mô tả mức độ phụ thuộc giữa các hạng mục trong luật kết hợp và mô tả theo độ mạnh (Strongest Links) đến giảm dần (kéo gần đến All Links). 
+![alt text](/Images/Picture18.png)
+Nhận xét: Dựa vào tất cả những liên kết mà nó phụ thuộc đến giá thuê nhà thấp hơn 15336, cho thấy rằng những nơi cho thuê có quy mô nhỏ với diện tích dưới 1000 có từ 2 3 phòng cho thuê với tình trạng nội thất là không trang bị hay chỉ trang bị một ít, bên cạnh đó những nơi này thuộc khu vực ‘Super’ trong các thành phố như Kolkata, Hyderabad, Chennai, hay Bangalore, thậm chí trong thành phố Delhi mà do chính chủ đứng ra cho thuê thì khả năng giá thuê sẽ khá thấp. 
