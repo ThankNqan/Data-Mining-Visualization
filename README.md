@@ -44,24 +44,36 @@
 ## 4. Trực quan dữ liệu
 ##### 4.1. Quy mô của các Houses/Apartments/Flats cho thuê có ảnh hưởng đến giá thuê không?
 - Biểu đồ nhiệt thể hiện sự tương quan giữa các biến Number of Bedrooms - Halls - Kitchens, Size, Bathroom và Rent.
+
 ![alt text](/Images/Picture9.png)
+
     Nhận xét: Ta có thể thấy có sự tương quan mạnh giữa ba biến Number of Bedrooms - Halls - Kitchens, Bathroom và Size với nhau. Cho thấy chúng có tỉ lệ thuận đồng nghĩa là quy mô Houses/Apartments/Flats lớn thì số lượng phòng Bedrooms - Halls - Kitchens nói chung hay số lượng phòng Bathroom và diện tích chung cũng sẽ lớn theo. 
-- ̵Biểu đồ tương quan giữa Diện tích, Số lượng Bedrooms - Halls - Kitchens cho thuê với giá thuê.
+- Biểu đồ tương quan giữa Diện tích, Số lượng Bedrooms - Halls - Kitchens cho thuê với giá thuê.
+
 ![alt text](/Images/Picture10.png)
+
     Nhận xét: Khi kết hợp các yếu tố lại với nhau ta thấy nếu diện tích cho thuê lớn với nhiều phòng cho thuê thì chắc chắn giá cho thuê sẽ mắc. Tuy nhiên với những nơi cho thuê có diện tích nhỏ ít số phòng thì không thể khẳng định chúng có giá cho thuê rẻ. 
 ##### 4.2. Loại khu vực của các Houses/Apartments/Flats cho thuê có liên quan đến giá cho thuê hay không?
-- ̵Phân loại các loại khu vực tại các Houses/Apartments/Flats cho thuê
+- Phân loại các loại khu vực tại các Houses/Apartments/Flats cho thuê
+
 ![alt text](/Images/Picture11.png)
+
     Nhận xét: Ta thấy các nơi cho thuê được chia ra 2 khu vực chính là Super Area và Carpet Area. 
 - Sự phân bố giá thuê giữa khu Super và Carpet
+
 ![alt text](/Images/Picture12.png)
+
     Nhận xét: Hầu hết các hầu các chỗ thuê thuộc khu vực Super có mức giá từ trung bình đến thấp. Còn khu vực Carpet sở hữu nhiều nơi cho thuê có giá khá cao so với khu vực Super. Carpet sở hữu nhiều những căn hộ/ phòng/ nhà cho thuê  khá đắt đỏ.
 ##### 4.3. Những loại người thuê nhà được ưa thích?
 - Các loại đối tượng ưu tiên cho thuê nhà
+
 ![alt text](/Images/Picture13.png)
+
     Nhận xét: 72,6% chủ sở hữu nhà sẵn sàng cho cả gia đình và người độc thân thuê nhà của họ.
 - Phân bố giá thuê nhà giữa đối tượng ‘Family’ và ‘Bachelors
+
 ![alt text](/Images/Picture14.png)
+
     Nhận xét: Ta thấy không có nhiều sự khác biệt về giá thuê giữa hai đối tượng ‘Bachelors’ và ‘Family’
 ##### 4.4. Dashboard giá thuê nhà ở Ấn Độ
 ![alt text](/Images/Picture15.png)
